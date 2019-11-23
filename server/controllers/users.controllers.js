@@ -19,6 +19,7 @@ module.exports = apiPrefix => {
 function readAllUsers(req, res) {
     usersService.readAllUsers()
         .then(users => {
+            console.log(users)
             res.status(200).json(users)
         })
         .catch(err => {
