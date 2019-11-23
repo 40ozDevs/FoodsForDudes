@@ -1,15 +1,12 @@
-import React from 'react';
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row, Col } from 'react-bootstrap';
-import FormControl from 'react-bootstrap/FormControl';
-import InputGroup from 'react-bootstrap/InputGroup';
-import Button from 'react-bootstrap/Button';
+ < Row className = "align-items-end" >
+     <Col className = "" >
+     Find a Recipe </Col> <Col className = "" >
+     <InputGroup className = "" >
+     <FormControl id = "recipe-search" />
+     </InputGroup> </Col> <Col className = "" >
+     <Button>Search</Button> </Col> </Row>
 
-function App() {
-  return (
-    <Container className="">
-      
+<Container className="">
       <Row className="">
         <Col className = "d-flex justify-content-end">
           <Button>Hamburger menu placeholder</Button>
@@ -26,8 +23,3 @@ function App() {
         </Col>
       </Row> 
     </Container>
-    
-  );
-}
-
-export default App;
