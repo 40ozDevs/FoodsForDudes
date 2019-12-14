@@ -12,6 +12,14 @@ code {
     monospace;
 }
 
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-100 {
+  margin-top: 100px;
+}
+
 .hamburger-bar {
   width: 35px;
   height: 5px;
@@ -21,4 +29,7 @@ code {
 }
 .hamburger-btn {
   flex-direction: column;
+}
+#recipe-search {
+  width: 400px;
 }
