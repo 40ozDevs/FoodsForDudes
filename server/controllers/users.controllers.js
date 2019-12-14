@@ -1,11 +1,6 @@
-"use strict"
-
 const usersService = require("../services/users.services")
 
-let _apiPrefix
-
 module.exports = apiPrefix => {
-    _apiPrefix = apiPrefix
     return {
         readAllUsers,
         readUserById,

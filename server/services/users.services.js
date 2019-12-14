@@ -1,5 +1,3 @@
-"use strict"
-
 const mongodb = require("../mongodb")
 const conn = mongodb.connection
 const ObjectId = mongodb.ObjectId

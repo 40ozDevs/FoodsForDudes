@@ -1,11 +1,10 @@
-"use strict"
-
 const express = require("express")
 const app = express()
 const dotenv = require("dotenv")
 const bodyParser = require("body-parser")
-const mongo = require("./mongodb")
-const mainRouter = require("./routes")
+const mongo = require("./server/mongodb")
+const mainRouter = require("./server/routes")
+const path = require("path")
 
 // Setup CORS. Can use Node's built-in cors() function too
 app.use((req, res, next) => {
@@ -14,6 +13,10 @@ app.use((req, res, next) => {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
     next()
 })
+
+// Serve up our frontend
+// Note: In order to connect Express to React, we need to run "npm run build" to compile/create finished html page
+app.use(express.static(path.join(__dirname, '/build')))
 
 // allow .env file use for Node.js
 dotenv.config()
@@ -29,6 +32,10 @@ app.use(bodyParser.urlencoded({
 
 // Use routes/index.js as primary route entry
 app.use(mainRouter)
+
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname + "/build/index.html"))
+})
 
 // start instance of mongoDB to pass around app then start express
 mongo.connect(process.env.MONGODB_URL)

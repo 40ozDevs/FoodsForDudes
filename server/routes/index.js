@@ -1,16 +1,10 @@
-"use strict"
-
 const express = require("express")
 const router = express.Router()
 
 const usersApiPrefix = "/api/users"
 const usersRoutes = require("./users.routes")(usersApiPrefix)
 
-const path = require("path")
-const contentPath = path.join(__dirname, "../../client")
-
 module.exports = router
-router.use(express.static(contentPath))
 
 router.use(usersApiPrefix, usersRoutes)
 
