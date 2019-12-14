@@ -11,8 +11,10 @@ function App() {
     <Container className="">
       
       <Row className="">
-        <Col className = "d-flex justify-content-end">
-          <Button>Hamburger menu placeholder</Button>
+        <Col className = "d-flex justify-content-end hamburger-btn">
+          <div className="hamburger-bar"></div>
+          <div className="hamburger-bar"></div>
+          <div className="hamburger-bar"></div>
         </Col>
       </Row>
       <Row className="">

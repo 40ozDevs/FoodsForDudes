@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.hamburger-bar {
+  width: 35px;
+  height: 5px;
+  background-color: darkblue;
+  margin: 2px 0;
+  margin-left: auto;
+}
+.hamburger-btn {
+  flex-direction: column;
+}
