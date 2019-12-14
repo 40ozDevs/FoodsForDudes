@@ -21,3 +21,12 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# environment
+/server/.env
+
+# Agenda / Logging
+eventlog.txt
+
+# vscode
+.vscode
