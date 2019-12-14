@@ -16,7 +16,7 @@ app.use((req, res, next) => {
 
 // Serve up our frontend
 // Note: In order to connect Express to React, we need to run "npm run build" to compile/create finished html page
-app.use(express.static(path.join(__dirname, '/build')))
+app.use(express.static(path.join(__dirname, '/client/build')))
 
 // allow .env file use for Node.js
 dotenv.config()
@@ -34,7 +34,7 @@ app.use(bodyParser.urlencoded({
 app.use(mainRouter)
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname + "/build/index.html"))
+    res.sendFile(path.join(__dirname + "/client/build/index.html"))
 })
 
 // start instance of mongoDB to pass around app then start express

@@ -6,8 +6,8 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "envFile": "${workspaceFolder}\\server\\.env",           
-            "program": "${workspaceFolder}\\server\\server.js"
+            "envFile": "${workspaceFolder}\\.env",           
+            "program": "${workspaceFolder}\\server.js"
         }
     ]
 }
