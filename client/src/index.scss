@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url("./Assets/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-100 {
+  margin-top: 100px;
+}
+
+.hamburger-bar {
+  width: 35px;
+  height: 5px;
+  background-color: darkblue;
+  margin: 2px 0;
+  margin-left: auto;
+}
+
+.hamburger-btn {
+  flex-direction: column;
+}
+
+#recipe-search {
+  width: 400px;
+}
+
+#title {
+  font-family: "Arial";
+  font-size: 12ex;
+}
