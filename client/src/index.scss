@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("./Assets/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 code {
@@ -27,9 +30,16 @@ code {
   margin: 2px 0;
   margin-left: auto;
 }
+
 .hamburger-btn {
   flex-direction: column;
 }
+
 #recipe-search {
   width: 400px;
+}
+
+#title {
+  font-family: "Arial";
+  font-size: 12ex;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './index.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import FormControl from 'react-bootstrap/FormControl';
@@ -19,7 +19,7 @@ function App() {
       </Row>
       <Row className="mt-10">
         <Col className = "d-flex justify-content-end hamburger-btn">
-          <h1 className="text-center">Foods4Dudes</h1>
+          <h1 className="text-center" id="title">Foods4Dudes</h1>
           <p className="text-center">It's in the name</p>
         </Col>
       </Row>
