@@ -55,6 +55,7 @@ function createUser(data) {
         email: data.email,
         username: data.username,
         password: data.password,
+        recipes: data.recipes,
         dateCreated: new Date(),
         dateModified: new Date(),
         dateDeactivated: null,
@@ -76,6 +77,7 @@ function updateUser(data, id) {
             email: data.email,
             username: data.username,
             password: data.password,
+            recipes: data.recipes,
             dateModified: new Date()
         }
     }

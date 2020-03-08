@@ -4,6 +4,9 @@ const router = express.Router()
 const usersApiPrefix = "/api/users"
 const usersRoutes = require("./users.routes")(usersApiPrefix)
 
+const recipesApiPrefix = "/api/recipes"
+const recipesRoutes = require("./recipes.routes")(recipesApiPrefix)
+
 module.exports = router
 
 router.use(usersApiPrefix, usersRoutes)
