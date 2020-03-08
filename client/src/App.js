@@ -11,6 +11,21 @@ function App() {
     <Container className="">
       
       <Row className="mt-10">
+        <Col className="d-flex justify-content-end hamburger-btn">
+          <div class="container">
+            <input id="toggle" type="checkbox" />
+            <label class = "toggle-container" for="toggle">
+            <span class="button button-toggle"></span> 
+           </label>
+            <nav class="nav">
+              <a class="nav-item" href="">Dashboard</a> 
+              <a class="nav-item" href="">History</a>
+              <a class="nav-item" href="">Statistics</a> 
+              <a class="nav-item" href="">Settings</a>
+            </nav> 
+            </div>
+        </Col>
+
         <Col className = "d-flex justify-content-end hamburger-btn">
           <div className="hamburger-bar"></div>
           <div className="hamburger-bar"></div>
