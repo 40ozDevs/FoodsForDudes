@@ -1,3 +1,8 @@
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
+const myPlaintextPassword = 's0/\/\P4$$w0rD';
+const someOtherPlaintextPassword = 'not_bacon';
+
 const usersService = require("../services/users.services")
 
 module.exports = apiPrefix => {
@@ -7,7 +12,8 @@ module.exports = apiPrefix => {
         createUser,
         updateUser,
         deactivateUser,
-        hardDeleteUser
+        hardDeleteUser,
+        validate
     }
 }
 
@@ -35,14 +41,30 @@ function readUserById(req, res) {
 }
 
 function createUser(req, res) {
-    usersService.createUser(req.body)
-        .then(response => {
-            res.status(201).send(response)
-        })
-        .catch(err => {
-            console.log(err)
-            res.status(500).send(err)
-        })
+    console.log('test')
+    let oldPass = req.body.password
+
+    bcrypt.hash(req.body.password, saltRounds, function (err, hash) {
+    console.log('test')
+        // Store hash in your password DB.
+        bcrypt.compare(oldPass, hash, function (err, result) {
+    console.log('test')
+            if (result) {
+                req.body.password = hash
+                usersService.createUser(req.body)
+                    .then(response => {
+                        res.status(201).send(response)
+                    })
+                    .catch(err => {
+                        console.log(err)
+                        res.status(500).send(err)
+                    })
+            } else {
+                console.warn("Password Hash doesn't match!!!")
+                res.status(500).send("Password Hash doesn't match!!!")
+            }
+        });
+    });
 }
 
 function updateUser(req, res) {
@@ -76,4 +98,8 @@ function hardDeleteUser(req, res) {
             console.log(err)
             res.status(500).send(err)
         })
+}
+
+function validate(req, res) {
+    console.log(req.body)
 }
