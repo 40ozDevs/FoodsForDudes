@@ -5,7 +5,7 @@ const usersApiPrefix = "/api/users"
 const usersRoutes = require("./users.routes")(usersApiPrefix)
 
 const recipesApiPrefix = "/api/recipes"
-const recipesRoutes = require("./recipes.routes")(recipesApiPrefix)
+// const recipesRoutes = require("./recipes.routes")(recipesApiPrefix)
 
 module.exports = router
 
